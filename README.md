@@ -1,6 +1,6 @@
 # ZivScript
 
-Command Cases
+A Script Interperter For Microsoft Windows Operating Systems
 
     Echo
         Command: echo
