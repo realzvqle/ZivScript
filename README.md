@@ -11,7 +11,7 @@ Command Cases
         Action: Computes and prints the hash value of the args string.
 
     Start App
-        Command: Start App
+        Command: start
         Action: Initiates the execution of an application specified by the args string.
 
     Random Integer
