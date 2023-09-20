@@ -18,7 +18,7 @@ unsigned long hash(char* s) {
 }
 
 
-int cmdCheck(FILE* fp, char* cmd, char* args, char* argvv) {
+int cmdCheck( char* cmd, char* args, char* argvv) {
 	switch (hash(cmd)) {
 	case 1288069183: // hash for echo
 		printf("%s\n", args);
@@ -45,6 +45,15 @@ int cmdCheck(FILE* fp, char* cmd, char* args, char* argvv) {
 		else {
 			findPathofApp(args);
 		}
+		break;
+	case -1540525857:
+		exit(0);
+		break;
+	case -42905985:
+		printf("ZivScript Version %0.2f, \nCopyright \"zvqle\", All Rights Reserved\n", VER);
+		break;
+	case 256473919:
+		system("cls");
 		break;
 	default:
 		printf("%s Is The Wrong Syntax\n", cmd);

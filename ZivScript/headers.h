@@ -4,6 +4,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_DEPRECATE
 #define BUF 255
+#define clrscr() printf("\e[1;1H\e[2J")
 
 #include <stdio.h>
 #include <string.h>
@@ -11,6 +12,7 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#include <conio.h>
 
 
 
@@ -24,7 +26,7 @@ struct vars {
 
 // cmdchecker.c
 unsigned long hash(char* s);
-int cmdCheck(FILE* fp, char* cmd, char* args, char* argvv);
+int cmdCheck(char* cmd, char* args, char* argvv);
 
 // start.c
 void StartApp(char* args);
@@ -44,4 +46,8 @@ char* findPathofApp(char* args);
 
 // parser.c
 void parser(char buffer[BUF], FILE* fp, char* cmd, char* args, char* argv);
+
+
+// cli.c
+void cliparser(char buffer[BUF], char* cmd, char* args, char* argv);
 

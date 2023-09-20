@@ -6,20 +6,27 @@
 
 // Runs on Start
 int main(int argc, char *argv[]) {
-	struct vars main;
+	struct vars fmain;
 
-	main.cmd = " ";
-	main.args = " ";
-	strcpy(main.buffer, " ");
+	fmain.cmd = " ";
+	fmain.args = " ";
+	strcpy(fmain.buffer, " ");
+	
 
 	if (!argv[1]) {
-		printf("Failed Reading File, Please enter a correct file\n");
+		fmain.fp = NULL;
+		cliparser(fmain.buffer, fmain.cmd, fmain.args, argv[0]);
+		//printf("Failed Reading File, Please enter a correct file\n");
 		return 0;
 	}
-	main.fp = fopen(argv[1], "r");
-	parser(main.buffer, main.fp, main.cmd, main.args, argv[0]);
+	else {
+		fmain.fp = fopen(argv[1], "r");
+		parser(fmain.buffer, fmain.fp, fmain.cmd, fmain.args, argv[0]);
 
 
 
-	return 0;
-}
+		return 0;
+	}
+
+	}
+	

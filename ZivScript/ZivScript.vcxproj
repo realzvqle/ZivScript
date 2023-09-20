@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cli.c" />
     <ClCompile Include="cmdchecker.c" />
     <ClCompile Include="misc.c" />
     <ClCompile Include="findpath.c" />

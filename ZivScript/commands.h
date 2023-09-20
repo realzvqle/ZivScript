@@ -6,13 +6,15 @@
 
 #include "headers.h"
 
+#define VER 0.02f
+
 
 
 
 
 // cmdchecker.c
 unsigned long hash(char* s);
-int cmdCheck(FILE* fp, char* cmd, char* args, char* argvv);
+int cmdCheck(char* cmd, char* args, char* argvv);
 
 // start.c
 void StartApp(char* args);
@@ -32,4 +34,11 @@ char* findPathofApp(char* args);
 
 // parser.c
 void parser(char buffer[BUF], FILE* fp, char* cmd, char* args, char* argv);
+
+
+
+// cli.c
+void cliparser(char buffer[BUF], char* cmd, char* args, char* argv);
+
+
 #endif

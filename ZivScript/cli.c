@@ -4,9 +4,13 @@
 
 
 
-void parser(char buffer[BUF], FILE* fp, char* cmd, char* args, char* argv) {
+void cliparser(char buffer[BUF], char* cmd, char* args, char* argv) {
 	int pass = 0;
-	while (fgets(buffer, BUF, fp)) {
+	printf("ZivScript Version %0.2f\nCopyright \"zvqle\", all rights reserved\n\n", VER);
+	
+	while (TRUE) {
+		printf("> ");
+		fgets(buffer, BUF, stdin);
 		strtok(buffer, "\n");
 		cmd = strtok(buffer, " \n");
 		args = strtok(NULL, "\n");
